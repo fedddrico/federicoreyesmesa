@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ten mi vida</title>
+  <link rel="icon" href="icon.png" type="image/png">
+
+  <style>
+    /* Para que el video ocupe toda la pantalla */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    /* Video en pantalla completa */
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1; /* para que quede detrás del texto */
+    }
+
+    /* Contenedor de columnas */
+    .columns {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: flex-start; /* todas a la izquierda */
+      align-items: flex-start;     /* arriba */
+      width: 100%;
+      padding: 40px;
+      gap: 50px; /* <<--- aquí controlas la separación entre columnas */
+    }
+
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+
+    /* Palabras cliqueables */
+     .título {
+      position: relative;
+      font-size: 12px;
+      font-weight: bold;
+      color: #ffd6f5;
+      text-decoration: none;
+      text-align: left;
+      line-height: 1;
+    }
+
+    .títulocliqueable {
+      position: relative;
+      font-size: 12px;
+      font-weight: bold;
+      color: #ffd6f5;
+      text-decoration: none;
+      text-align: left;
+      line-height: 1;
+    }
+
+    .títulocliqueable:hover {
+      color: #58ff2e;
+    }
+    
+    .word {
+      position: relative;
+      font-size: 12px;
+      font-weight: normal;
+      color: #ffd6f5;
+      text-decoration: none;
+      cursor: pointer;
+      text-align: left;
+      line-height: 0.1;
+    }
+
+    .word:hover {
+      color: #58ff2e;
+    }
+
+        /* Imagen flotante */
+    .word img {
+      display: none;
+      position: fixed;   /* ahora fijo en la pantalla */
+      top: 30%;          /* centro vertical */
+      left: 40%;         /* centro horizontal */
+      max-width: 800px;  /* puedes ajustar el tamaño */
+      border-radius: 8px;
+      box-shadow: 0 0 80px 40px rgba(255, 200, 255, 0.8); /* glow rosado */
+      mix-blend-mode: multiply;
+    }
+
+    .word:hover img {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <!-- Video de fondo -->
+  <video id="background-video" autoplay muted loop>
+    <source src="background.mp4" type="video/mp4">
+    Tu navegador no soporta video en HTML5.
+  </video>
+
+  <!-- Columnas de palabras -->
+  <div class="columns">
+    <div class="column">
+      <a class="título">portafolio</a>
+      <a class="word" href="portafolio1/de_esto_tampoco_nos_vamos_a_morir.html">de esto tampoco nos vamos a morir (2025)
+        <img src="de_1.jpg" alt="Imagen 1">
+      </a>
+      <a class="word" href="portafolio2/perdón_por_tanto_y_gracias_por_tan_poco.html">perdón por tanto y gracias por tan poco (2023-2025)
+        <img src="perdon_1.jpg" alt="Imagen 2">
+      </a>
+       <a class="word" href="portafolio3/mi_compu_tiene_miedo_de_morirse.html">mi compu tiene miedo de morirse (2024)
+        <img src="mi_1.jpg" alt="Imagen 2">
+      </a>
+       <a class="word" href="portafolio5/no_prometo_nada.html">no prometo nada (2024)
+        <img src="no_prometo_1.jpg" alt="Imagen 2">
+      </a>
+       <a class="word" href="portafolio4/amoramoramor.html">amoramoramor (2023)
+        <img src="amor_1.jpg" alt="Imagen 2">
+      </a>
+       <a class="word" href="portafolio6/espérame.html">espérame (2022)
+        <img src="esperame_1.jpg" alt="Imagen 2">
+      </a>
+    </div>
+
+    <div class="column">
+      <a class="título">curaduría</a>
+      <a class="word" href="curaduría1/la_distancia_entre_las_cosas_que_hacen_ruido.html">la distancia entre las cosas que hacen ruido (2025)
+        <img src="la_distancia_1.jpg" alt="Imagen 3">
+      </a>
+      <a class="word" href="curaduría2/coleccion_en_escena.html">fetiche: conversaciones materiales (2024)
+        <img src="fetiche_1.jpg" alt="Imagen 4">
+      </a>
+       <a class="word" href="curaduría3/los_tempos_2024.html">los tempos de las memorias, las músicas y las experiencias (2024)
+        <img src="los_tempos_1.jpeg" alt="Imagen 4">
+      </a>
+         <a class="word" href="curaduría4/la_barca_itinerante.html">la barca itinerante: memorias sociales del 46sna (2022)
+        <img src="itinerante_1.jpeg" alt="Imagen 4">
+      </a>
+         <a class="word" href="curaduría5/la_barca_del_46.html">la barca: memorias sociales del 46sna (2022)
+        <img src="la_barca_1.png" alt="Imagen 4">
+      </a>
+         <a class="word">río adentro: memoria y mediación del 46sna (2022)
+        <img src="rio_1.jpg" alt="Imagen 4">
+      </a>
+    </div>
+
+    <div class="column">
+      <a class="títulocliqueable" href="diseñovisual/diseño_visual.html">diseño visual</a>
+    </div>
+
+    <div class="column">
+      <a class="títulocliqueable" href="cv/cv.html">cv</a>
+    </div>
+  </div>
+
+</body>
+</html>
