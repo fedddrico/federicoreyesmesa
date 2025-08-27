@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ten mi vida</title>
+  <link rel="icon" href="icono.png" type="image/png">
+
+  <style>
+    /* Para que el video ocupe toda la pantalla */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    /* Video en pantalla completa */
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1; /* para que quede detrás del texto */
+    }
+
+    /* Contenedor de columnas */
+    .columns {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: flex-start; /* todas a la izquierda */
+      align-items: flex-start;     /* arriba */
+      width: 100%;
+      padding: 40px;
+      gap: 50px; /* <<--- aquí controlas la separación entre columnas */
+    }
+
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+
+    /* Palabras cliqueables */
+     .título {
+      position: relative;
+      font-size: 12px;
+      font-weight: bold;
+      color: #ffd6f5;
+      text-decoration: none;
+      text-align: left;
+      line-height: 1;
+    }
+
+    .títulocliqueable {
+      position: relative;
+      font-size: 12px;
+      font-weight: bold;
+      color: #ffd6f5;
+      text-decoration: none;
+      text-align: left;
+      line-height: 1;
+    }
+
+    .títulocliqueable:hover {
+      color: #58ff2e;
+    }
+    
+    .word {
+      position: relative;
+      font-size: 12px;
+      font-weight: normal;
+      color: #ffd6f5;
+      text-decoration: none;
+      cursor: pointer;
+      text-align: left;
+      line-height: 0.1;
+    }
+
+    .word:hover {
+      color: #58ff2e;
+    }
+
+        /* Imagen flotante */
+    .word img {
+      display: none;
+      position: fixed;   /* ahora fijo en la pantalla */
+      top: 30%;          /* centro vertical */
+      left: 40%;         /* centro horizontal */
+      max-width: 800px;  /* puedes ajustar el tamaño */
+      border-radius: 8px;
+      box-shadow: 0 0 80px 40px rgba(255, 200, 255, 0.8); /* glow rosado */
+      mix-blend-mode: multiply;
+    }
+
+    .word:hover img {
+      display: block;
+    }
+
+    .eng-link {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #ffd6f5;
+      text-decoration: none;
+      line-height: 1;
+      z-index: 10;
+    }
+
+    .eng-link:hover {
+      color: #58ff2e;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <!-- Video de fondo -->
+  <video id="background-video" autoplay muted loop>
+    <source src="../background.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <a class="títulocliqueable eng-link" href="../index.html">ESP</a>
+
+  <!-- Columnas de palabras -->
+  <div class="columns">
+    <div class="column">
+      <a class="título">portfolio</a>
+      <a class="word" href="de_esto_tampoco_nos_vamos_a_morir.html">de esto tampoco nos vamos a morir (we’re not dying from this either) (2025)
+        <img src="../de_1.jpg" alt="Imagen 1">
+      </a>
+      <a class="word" href="perdón_por_tanto_y_gracias_por_tan_poco.html">perdón por tanto y gracias por tan poco (sorry for so much and thanks for so little) (2023-2025)
+        <img src="../perdon_1.jpg" alt="Imagen 2">
+      </a>
+       <a class="word" href="mi_compu_tiene_miedo_de_morirse.html">mi compu tiene miedo de morirse (my computer is afraid of dying) (2024)
+        <img src="../mi_1.jpg" alt="Imagen 2">
+      </a>
+       <a class="word" href="no_prometo_nada.html">no prometo nada (i don’t promise anything) (2024)
+        <img src="../no_prometo_1.jpg" alt="Imagen 2">
+      </a>
+       <a class="word" href="amoramoramor.html">amoramoramor (lovelovelove) (2023)
+        <img src="../amor_1.jpg" alt="Imagen 2">
+      </a>
+       <a class="word" href="espérame.html">espérame (wait for me) (2022)
+        <img src="../esperame_1.jpg" alt="Imagen 2">
+      </a>
+    </div>
+
+    <div class="column">
+      <a class="título">curatorial practice</a>
+      <a class="word" href="la_distancia_entre_las_cosas_que_hacen_ruido.html">la distancia entre las cosas que hacen ruido (the distance between the things that make noise) (2025)
+        <img src="../la_distancia_1.jpg" alt="Imagen 3">
+      </a>
+      <a class="word" href="coleccion_en_escena.html">fetiche: conversaciones materiales (fetish: material conversations) (2024)
+        <img src="../fetiche_1.jpg" alt="Imagen 4">
+      </a>
+       <a class="word" href="los_tempos_2024.html">los tempos de las memorias, las músicas y las experiencias (the tempos of memories, music, and experiences) (2024)
+        <img src="../los_tempos_1.jpeg" alt="Imagen 4">
+      </a>
+         <a class="word" href="la_barca_itinerante.html">la barca itinerante: archivo plural del 46sna (the itinerant boat: social memories of the 46sna) (2022)
+        <img src="../itinerante_1.jpeg" alt="Imagen 4">
+      </a>
+         <a class="word" href="la_barca_del_46.html">la barca: archivo plural del 46sna (the boat: social memories of the 46sna) (2022)
+        <img src="../la_barca_1.png" alt="Imagen 4">
+      </a>
+         <a class="word">río adentro: memoria y mediación del 46sna (into the river: memory and mediation of the 46sna) (2022)
+        <img src="../rio_1.jpg" alt="Imagen 4">
+      </a>
+    </div>
+
+    <div class="column">
+      <a class="títulocliqueable" href="diseño_visual.html">visual design</a>
+    </div>
+
+    <div class="column">
+      <a class="títulocliqueable" href="cv.html">cv</a>
+    </div>
+  </div>
+
+</body>
+</html>
